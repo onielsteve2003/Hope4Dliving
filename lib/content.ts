@@ -186,10 +186,125 @@ export const faqs = [
   },
 ];
 
+export const powerMessages = [
+  {
+    title: "Power to Prevail",
+    quote:
+      "The Holy Spirit is not a tranquilizer or a stimulant. He does not come to give us an emotional experience, but make no mistake about it: His presence is heart-moving. Life is tough. God sends His power to people in tough situations. He is the original life force meant to empower us to live victoriously, abundantly and to be a witness to the world.",
+    author: "Inspired by Evangelist Reinhard Bonnke",
+  },
+  {
+    title: "Bringing Good News to the World",
+    quote:
+      "Are you ready to answer God's call? The harvest is plentiful, but the workers are few. Join us in taking the life-transforming hope of Christ to every corner of Nigeria and beyond.",
+    author: "Hope4DLiving Global Outreach",
+  },
+  {
+    title: "Messages of Salvation and Hope",
+    quote:
+      "Every soul matters to God. Through city-wide crusades, compassion clinics, and relief missions, we demonstrate that the Gospel is not just words—it's tangible love in action, reaching the broken, the hurting, and the lost.",
+    author: "Hope4DLiving Global Outreach",
+  },
+];
+
+export const salvatonFocus = {
+  headline: "The Gospel Changes Everything",
+  description:
+    "At the heart of Hope4DLiving is the life-transforming message of Jesus Christ. Every crusade, every medical mission, every food distribution is rooted in the conviction that salvation brings eternal hope and practical transformation.",
+  callToAction: "Experience God's Love Today",
+  steps: [
+    {
+      title: "Hear the Message",
+      description:
+        "The good news of redemption through Jesus Christ is proclaimed boldly at every outreach event—open-air crusades, pastoral conferences, and community gatherings.",
+    },
+    {
+      title: "Receive the Hope",
+      description:
+        "Salvation is a free gift. Through faith in Jesus, you receive forgiveness, new life, and the power of the Holy Spirit to walk in victory.",
+    },
+    {
+      title: "Live Transformed",
+      description:
+        "A life surrendered to Christ impacts families, communities, and nations. We equip believers with discipleship resources, mentorship, and practical support to grow in their faith.",
+    },
+  ],
+};
+
+export const firstCrusadeFocus = {
+  eyebrow: "First Crusade Season",
+  headline: "Help us prepare with prayer, partnership, and readiness.",
+  description:
+    "This is Hope4DLiving's first major crusade outreach. We are preparing carefully so the Gospel is proclaimed with excellence, compassion is delivered with dignity, and follow-up discipleship is established for lasting fruit.",
+  focusCards: [
+    {
+      title: "Prayer Covering",
+      description:
+        "Intercede for open hearts, safe travel, unity with local church partners, and the work of the Holy Spirit during every altar call and follow-up conversation.",
+      meta: "Prayer",
+    },
+    {
+      title: "Field Logistics",
+      description:
+        "We are planning permits, sound and stage, ushers, security coordination, transportation, and volunteer scheduling so the outreach runs smoothly and safely.",
+      meta: "Operations",
+    },
+    {
+      title: "Compassion Response",
+      description:
+        "We are preparing food relief packs, Bibles, and basic support referrals so practical love accompanies Gospel proclamation.",
+      meta: "Compassion",
+    },
+    {
+      title: "Discipleship Follow-Up",
+      description:
+        "We are aligning with pastors and mentors for counseling, new-believer follow-up, and small-group discipleship after the crusade.",
+      meta: "Discipleship",
+    },
+  ],
+  note:
+    "Impact stories and testimonies will be published after the first crusade as God confirms His Word with transformed lives.",
+};
+
+export const outreachVision = {
+  title: "Our Ministry Model",
+  subtitle: "Following the Footsteps of Great Evangelists",
+  description:
+    "Inspired by the mass evangelism and compassion-driven outreach of pioneers like Evangelist Reinhard Bonnke, Hope4DLiving combines bold proclamation of the Gospel with tangible demonstrations of Christ's love.",
+  principles: [
+    {
+      icon: "📢",
+      title: "Bold Evangelism",
+      description:
+        "City-wide crusades where the Gospel is preached with clarity, power, and urgency. We believe every person deserves to hear the message of salvation.",
+    },
+    {
+      icon: "❤️",
+      title: "Compassion in Action",
+      description:
+        "Medical missions, food banks, and relief shelters prove that God's love is not abstract—it meets people exactly where they are, body and soul.",
+    },
+    {
+      icon: "⚡",
+      title: "Spirit-Empowered Ministry",
+      description:
+        "We depend on the Holy Spirit for every breakthrough. Prayer, worship, and spiritual warfare undergird all our outreaches.",
+    },
+    {
+      icon: "🌍",
+      title: "Global Impact",
+      description:
+        "Starting in Nigeria, we're called to reach Africa and the nations. Every crusade plants seeds for multiplication and lasting transformation.",
+    },
+  ],
+};
+
 export const pageLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Programs", href: "/programs" },
+  { name: "Salvation", href: "/salvation" },
+  { name: "Resources", href: "/resources" },
   { name: "Donate", href: "/donate" },
   { name: "Contact", href: "/contact" },
 ];

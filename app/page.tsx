@@ -6,6 +6,8 @@ import {
   meetingSchedule,
   organizationProfile,
   strategicInitiatives,
+  powerMessages,
+  outreachVision,
 } from "@/lib/content";
 import { SectionCard } from "@/components/section-card";
 
@@ -197,6 +199,55 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Power Message Section - Inspired by Reinhardt Bonnke */}
+      <section className="bg-linear-to-br from-brand-700 via-brand-600 to-brand-800 py-16">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center text-white">
+            <h2 className="text-4xl font-bold sm:text-5xl">Are You Ready to Answer God's Call?</h2>
+            <p className="mx-auto mt-4 max-w-3xl text-lg leading-relaxed text-brand-50">
+              {powerMessages[1].quote}
+            </p>
+            <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+              <Link
+                href="/salvation"
+                className="inline-block rounded-full bg-white px-8 py-4 text-base font-bold text-brand-700 shadow-lg transition-all hover:bg-brand-50 hover:shadow-xl"
+              >
+                Experience God's Love
+              </Link>
+              <Link
+                href="/programs"
+                className="inline-block rounded-full border-2 border-white bg-white/10 px-8 py-4 text-base font-bold text-white backdrop-blur transition-all hover:bg-white/20"
+              >
+                Join the Mission
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ministry Model Section */}
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.5em] text-brand-600">{outreachVision.title}</p>
+          <h2 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">{outreachVision.subtitle}</h2>
+          <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-slate-600">
+            {outreachVision.description}
+          </p>
+        </div>
+        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {outreachVision.principles.map((principle, idx) => (
+            <div
+              key={idx}
+              className="rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm transition-all hover:shadow-lg"
+            >
+              <div className="text-4xl">{principle.icon}</div>
+              <h3 className="mt-4 text-xl font-bold text-slate-900">{principle.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-slate-600">{principle.description}</p>
+            </div>
+          ))}
         </div>
       </section>
 
