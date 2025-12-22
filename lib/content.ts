@@ -14,6 +14,38 @@ export const organizationProfile = {
       phone: "+2348056683285",
     },
   ],
+  emails: [
+    {
+      label: "General Inquiries",
+      address: "info@hope4dliving.org",
+      description: "For general questions and ministry information",
+    },
+    {
+      label: "Contact",
+      address: "contact@hope4dliving.org",
+      description: "Partnership, invitations, and outreach requests",
+    },
+    {
+      label: "Donations",
+      address: "donations@hope4dliving.org",
+      description: "Financial giving and donor inquiries",
+    },
+    {
+      label: "Prayer Requests",
+      address: "prayer@hope4dliving.org",
+      description: "Submit prayer requests and intercession needs",
+    },
+    {
+      label: "Volunteer",
+      address: "volunteer@hope4dliving.org",
+      description: "Volunteering and partnership opportunities",
+    },
+    {
+      label: "Administration",
+      address: "admin@hope4dliving.org",
+      description: "Administrative and official matters",
+    },
+  ],
 };
 
 export const aimsAndObjectives = [

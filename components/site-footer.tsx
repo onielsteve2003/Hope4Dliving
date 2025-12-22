@@ -45,6 +45,12 @@ export function SiteFooter() {
               </li>
             ))}
           </ul>
+          <div className="mt-4">
+            <p className="text-xs font-semibold uppercase tracking-wide text-slate-900">Email</p>
+            <a href="mailto:info@hope4dliving.org" className="text-sm text-brand-600 hover:underline">
+              info@hope4dliving.org
+            </a>
+          </div>
           <div className="mt-4 flex flex-col gap-1">
             <p className="text-xs text-slate-500">
               &copy; {new Date().getFullYear()} {organizationProfile.name}. All rights reserved.

@@ -1,4 +1,3 @@
-import { ContactForm } from "@/components/contact-form";
 import { PageHero } from "@/components/page-hero";
 import { organizationProfile } from "@/lib/content";
 
@@ -44,6 +43,20 @@ export default function ContactPage() {
                 ))}
               </ul>
             </div>
+            <div className="mt-6 rounded-2xl border border-slate-100 p-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.4em] text-brand-700">Email Addresses</p>
+              <ul className="mt-3 space-y-3">
+                {organizationProfile.emails.map((email) => (
+                  <li key={email.address}>
+                    <p className="text-sm font-semibold text-slate-900">{email.label}</p>
+                    <a href={`mailto:${email.address}`} className="text-sm text-brand-600 hover:underline">
+                      {email.address}
+                    </a>
+                    <p className="text-xs text-slate-500">{email.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
             <div className="mt-6 rounded-2xl border border-slate-100 p-4 text-sm text-slate-600">
               <p className="text-xs font-semibold uppercase tracking-[0.4em] text-brand-700">Mailing</p>
               <p>We are finalizing our dedicated P.O. Box. Please call the office line for courier drop-offs while registration is completed.</p>
@@ -51,8 +64,30 @@ export default function ContactPage() {
           </div>
           <div className="space-y-6">
             <div className="rounded-3xl border border-brand-100 bg-white p-8 shadow-xl shadow-brand-900/5">
-              <p className="text-xs font-semibold uppercase tracking-[0.5em] text-brand-600">Send a message</p>
-              <ContactForm />
+              <p className="text-xs font-semibold uppercase tracking-[0.5em] text-brand-600">Email only</p>
+              <h3 className="mt-3 text-xl font-bold text-slate-900">Reach the team directly</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Please email us using the addresses below. We monitor the inbox daily and will reply within 24 hours.
+              </p>
+              <div className="mt-6 space-y-3">
+                {organizationProfile.emails.slice(0, 3).map((email) => (
+                  <div key={email.address} className="rounded-2xl border border-slate-100 bg-slate-50 p-4">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-brand-700">{email.label}</p>
+                    <a href={`mailto:${email.address}`} className="text-sm font-semibold text-slate-900 hover:underline">
+                      {email.address}
+                    </a>
+                    <p className="text-xs text-slate-500">{email.description}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6">
+                <a
+                  href="mailto:contact@hope4dliving.org"
+                  className="inline-flex w-full justify-center rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-600/30 transition hover:bg-brand-700"
+                >
+                  Email contact@hope4dliving.org
+                </a>
+              </div>
             </div>
             <div className="relative overflow-hidden rounded-3xl border border-slate-200 shadow-lg">
               <img
