@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import {
   aimsAndObjectives,
@@ -119,17 +120,24 @@ const contactPortraits: Record<string, string> = {
   secretary: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80",
 };
 
+import dynamic from "next/dynamic";
+
+const CountdownTimer = dynamic(() => import("@/components/CountdownTimer"), { ssr: false });
+
 export default function Home() {
+  const crusadeDate = new Date("2027-01-06T08:00:00+01:00");
   return (
     <>
-      <section className="relative isolate overflow-hidden">
+
+      {/* Hero Section */}
+      <section className="relative isolate overflow-hidden min-h-[60vh] flex items-center justify-center">
         <img
           src={heroBanner.image}
           alt={heroBanner.alt}
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-slate-950/70" />
-        <div className="relative mx-auto flex max-w-5xl flex-col gap-6 px-4 py-24 text-center text-white sm:px-6 lg:px-8">
+        <div className="relative mx-auto flex max-w-5xl flex-col gap-6 px-4 py-24 text-center text-white sm:px-6 lg:px-8 items-center justify-center min-h-[40vh]">
           <p className="text-sm font-semibold uppercase tracking-[0.45em] text-brand-200">Hope4DLiving</p>
           <div>
             <h1 className="text-3xl font-bold sm:text-5xl">
@@ -156,6 +164,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
 
       <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="rounded-3xl bg-white p-8 shadow-xl shadow-brand-900/5">
@@ -318,6 +327,7 @@ export default function Home() {
         </div>
       </section>
 
+
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="rounded-3xl border border-slate-200 bg-linear-to-br from-white via-brand-50 to-white p-8 shadow-xl shadow-brand-900/10">
           <p className="text-sm font-semibold uppercase tracking-[0.45em] text-brand-700">Launch Roadmap</p>
@@ -334,6 +344,17 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Upcoming Events Banner (now after Launch Roadmap) */}
+      <section className="mx-auto max-w-3xl px-4 pt-10 pb-10">
+        <div className="rounded-3xl bg-gradient-to-r from-brand-600 via-brand-500 to-brand-700 p-6 text-center shadow-xl">
+          <h2 className="text-2xl font-bold text-white mb-2">Upcoming Event</h2>
+          <p className="text-lg text-white/90 mb-4">Enugu Crusade – January 2027</p>
+          <a href="/events" className="inline-block rounded-full bg-white px-6 py-3 text-brand-700 font-semibold shadow hover:bg-slate-100 transition">
+            View Details &rarr;
+          </a>
         </div>
       </section>
 

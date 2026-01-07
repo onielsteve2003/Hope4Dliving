@@ -1,5 +1,5 @@
 export const organizationProfile = {
-  name: "HOPE 4D LIVING GLOBAL OUTREACH",
+  name: "Hope 4d Living Global Outreach",
   shortName: "Hope4DLiving",
   tagline: "Taking the life-transforming hope of Christ to every dimension of life",
   address:
@@ -9,9 +9,14 @@ export const organizationProfile = {
     "Certified extract from the Corporate Affairs Commission, signed by the Registrar General Hussaini Ishaq Magaji (SAN).",
   contacts: [
     {
-      role: "Chairman",
-      name: "Rev Vitalis C. Onah",
-      phone: "+2348056683285",
+      role: "Mobile",
+      name: "Hope 4d Living Global Outreach",
+      phone: "0903 469 9523",
+    },
+    {
+      role: "Home",
+      name: "Hope 4d Living Global Outreach",
+      phone: "0912 702 8289",
     },
   ],
   emails: [
