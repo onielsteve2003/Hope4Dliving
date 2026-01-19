@@ -26,6 +26,28 @@ export default function AboutPage() {
         align="left"
       />
 
+      {/* Founder Section */}
+      <section className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="grid gap-8 rounded-3xl border border-slate-200 bg-white p-8 shadow-xl lg:grid-cols-[0.7fr_1.3fr] items-center">
+          <div className="flex justify-center lg:justify-start">
+            <img
+              src="/team/daddy.jpg"
+              alt="Founder: Rev. Vitalis C. Onah"
+              className="h-40 w-40 rounded-full object-cover border-4 border-brand-600 bg-slate-100"
+            />
+          </div>
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.45em] text-brand-600">Founder</p>
+            <h2 className="mt-3 text-2xl font-bold text-slate-900">Rev. Vitalis C. Onah</h2>
+            <p className="mt-3 text-sm text-slate-600">
+              A devoted servant-leader who began ministry in 2007 and now leads Hope4DLiving Global Outreach with a
+              heart for revival, compassion, and discipleship. He is the founder of The New Covenant Catholic Church
+              (Freedom City) and is happily married with five children (three girls and two boys).
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="mx-auto max-w-5xl px-4 pt-12 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg">

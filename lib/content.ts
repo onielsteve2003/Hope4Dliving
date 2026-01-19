@@ -341,7 +341,7 @@ export const pageLinks = [
   { name: "About", href: "/about" },
   { name: "Programs", href: "/programs" },
   { name: "Salvation", href: "/salvation" },
-  { name: "Resources", href: "/resources" },
+  // { name: "Resources", href: "/resources" },
   { name: "Donate", href: "/donate" },
   { name: "Contact", href: "/contact" },
 ];
