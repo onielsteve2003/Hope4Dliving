@@ -3,46 +3,15 @@ import React from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import {
-  donationOptions,
   organizationProfile,
   strategicInitiatives,
   outreachVision,
 } from "@/lib/content";
 import { SectionCard } from "@/components/section-card";
 
-const launchRoadmap = [
-  {
-    phase: "Phase 1",
-    title: "Foundation & CAC Certification",
-    description:
-      "Compliance filings so every outreach is rooted in accountability.",
-    status: "LIVE",
-  },
-  {
-    phase: "Phase 2",
-    title: "Digital Launch & Resource Hub",
-    description:
-      "Communication channels, and discipleship resources that keep partners informed in real time.",
-    status: "IN PROGRESS",
-  },
-  {
-    phase: "Phase 3",
-    title: "Field Deployments",
-    description:
-      "Roll out city-wide crusades, medical caravans, food bank pop-ups, and pastoral training hubs across Nigeria and Africa.",
-    status: "UP NEXT",
-  },
-];
-
 const heroBanner = {
   image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80&sat=-15",
   alt: "Volunteers offering food and encouragement during an outreach.",
-};
-
-
-const contactPortraits: Record<string, string> = {
-  chairman: "/team/daddy.jpg",
-  secretary: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80",
 };
 
 const CountdownTimer = dynamic(() => import("@/components/CountdownTimer"), { ssr: false });
@@ -90,28 +59,53 @@ export default function Home() {
         </video>
         <div className="absolute inset-0 bg-slate-950/70" />
         <div className="relative mx-auto flex max-w-5xl flex-col gap-6 px-4 py-24 text-center text-white sm:px-6 lg:px-8 items-center justify-center min-h-[40vh]">
-          <p className="text-sm font-semibold uppercase tracking-[0.45em] text-brand-200">Hope4DLiving</p>
+          {/* Trust Badge */}
+          <div className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-sm">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-green-400"></span>
+            <span className="text-xs font-medium text-white/90">CAC Registered Non-Profit</span>
+          </div>
+          
           <div>
-            <h1 className="text-3xl font-bold sm:text-5xl">
-              Preaching Christ, equipping ministers, restoring dignity across nations.
+            <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+              Bringing Hope to <span className="text-brand-200">Every Life</span>
             </h1>
-            <p className="mt-4 text-lg text-white/90">
-              A faith-forward outreach bringing hope, healing, and practical compassion.
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-white/90 sm:text-xl">
+              Gospel proclamation. Medical outreach. Food relief. Ministerial training.
             </p>
           </div>
+          
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Link
               href="/donate"
-              className="rounded-full bg-white/90 px-6 py-3 text-sm font-semibold text-brand-700 shadow shadow-brand-600/30 transition hover:bg-white"
+              className="group flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-brand-700 shadow-lg shadow-white/20 transition hover:bg-slate-100 hover:shadow-xl"
             >
-              Give today
+              <span>Partner With Us</span>
+              <svg className="h-4 w-4 transition group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
             </Link>
             <Link
               href="/programs"
-              className="rounded-full border border-white/50 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              className="rounded-full border-2 border-white/50 px-8 py-4 text-base font-semibold text-white transition hover:border-white hover:bg-white/10"
             >
-              Explore programs
+              See Our Work
             </Link>
+          </div>
+          
+          {/* Quick Stats */}
+          <div className="mt-8 grid grid-cols-3 gap-8 border-t border-white/20 pt-8">
+            <div>
+              <p className="text-2xl font-bold sm:text-3xl">4+</p>
+              <p className="text-xs text-white/70">Pillars of Impact</p>
+            </div>
+            <div>
+              <p className="text-2xl font-bold sm:text-3xl">100%</p>
+              <p className="text-xs text-white/70">Goes to Mission</p>
+            </div>
+            <div>
+              <p className="text-2xl font-bold sm:text-3xl">2025</p>
+              <p className="text-xs text-white/70">CAC Certified</p>
+            </div>
           </div>
         </div>
       </section>
@@ -124,6 +118,15 @@ export default function Home() {
             <h2 className="mt-3 text-3xl font-bold text-slate-900">Enugu Crusade – January 2027</h2>
             <p className="mt-3 text-sm text-slate-600">Wednesday 6th & Thursday 7th January 2027</p>
             <p className="mt-2 text-sm text-slate-600">Morning Session 8AM · Evening Session 4PM</p>
+            <Link
+              href="/contact"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-700"
+            >
+              <span>Register Interest</span>
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
           </div>
           <div className="relative flex items-center justify-center">
             <CountdownTimer targetDate={crusadeDate} />
@@ -156,11 +159,28 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-8 lg:grid-cols-2">
+      {/* Mission & Strategic Focus */}
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+        {/* Mission Statement */}
+        <div className="mb-16 text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.45em] text-brand-600">
+            Our Mission
+          </p>
+          <h2 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">
+            Reconciling men to God, restoring dignity to lives.
+          </h2>
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-600">
+            We exist to take the life-transforming hope of Christ to every dimension of life — 
+            through bold evangelism, compassion-driven outreach, and the equipping of ministers 
+            for sustainable kingdom impact across Nigeria, Africa, and the nations.
+          </p>
+        </div>
+
+        {/* Strategic Initiatives */}
+        <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.45em] text-brand-600">
-              Constitution Snapshot
+              What We Do
             </p>
             <h2 className="mt-3 text-3xl font-bold text-slate-900">
               Built on scripture, governed with integrity.
@@ -173,7 +193,7 @@ export default function Home() {
               href="/about"
               className="mt-6 inline-flex items-center text-sm font-semibold text-brand-600 underline-offset-4 hover:underline"
             >
-              Read the full constitution →
+              Learn more about us →
             </Link>
           </div>
           <div className="grid gap-4">
@@ -187,99 +207,103 @@ export default function Home() {
             ))}
           </div>
         </div>
-
-        <div className="grid gap-8 lg:grid-cols-2">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.4em] text-brand-600">Leadership</p>
-            <h2 className="mt-3 text-3xl font-bold text-slate-900">Accessible leaders, accountable stewardship.</h2>
-            <p className="mt-4 text-base text-slate-600">
-              Meet the founding team stewarding this assignment. We keep direct lines open so intercessors, partners, and
-              beneficiaries can reach us quickly for ministry coordination, accountability, and prayer support.
-            </p>
-            <Link
-              href="/contact"
-              className="mt-6 inline-flex items-center text-sm font-semibold text-brand-600 underline-offset-4 hover:underline"
-            >
-              Contact the team →
-            </Link>
-          </div>
-          <div className="grid gap-4">
-            {organizationProfile.contacts.map((contact) => (
-              <div key={contact.role} className="relative flex items-center rounded-3xl border border-slate-100 bg-white p-6 shadow-sm">
-                <div className="flex-1">
-                  <p className="text-xs font-semibold uppercase tracking-[0.35em] text-brand-500">{contact.role}</p>
-                  <h3 className="mt-2 text-xl font-semibold text-slate-900">{contact.name}</h3>
-                  <p className="mt-1 text-sm text-slate-600">Primary line: {contact.role === "Chairman" ? "+2348056683285" : contact.phone}</p>
-                </div>
-                <div className="ml-4 shrink-0">
-                  <img
-                    src={contactPortraits[contact.role.toLowerCase()] ?? heroBanner.image}
-                    alt={contact.name}
-                    className="h-16 w-16 rounded-full object-cover border-2 border-brand-500 bg-slate-100"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
-          <p className="text-sm font-semibold uppercase tracking-[0.45em] text-brand-600">Ways to Partner</p>
-          <h2 className="mt-3 text-3xl font-bold text-slate-900">Give, host, and advocate alongside us.</h2>
-          <div className="mt-8 grid gap-4 lg:grid-cols-1">
-            {donationOptions
-              .filter((option) => option.label === "Direct Bank Transfer")
-              .map((option) => (
-                <div key={option.label} className="rounded-2xl border border-slate-100 p-5">
-                  <p className="text-xs font-semibold uppercase tracking-[0.35em] text-brand-500">{option.label}</p>
-                  <ul className="mt-3 space-y-2 text-sm text-slate-600">
-                    {option.details.map((detail) => {
-                      if (detail.startsWith("Account Name:")) {
-                        return <li key={detail}><strong>Account Name:</strong> Covenant Catholic Ministry Worldwide</li>;
-                      }
-                      if (detail.startsWith("Bank Name:")) {
-                        return <li key={detail}><strong>Bank Name:</strong> Stanbic IBTC Bank</li>;
-                      }
-                      if (detail.startsWith("Account Number:")) {
-                        return <li key={detail}><strong>Account Number:</strong> 0015964783</li>;
-                      }
-                      if (detail.startsWith("Reference:")) {
-                        return <li key={detail}><strong>Reference:</strong> Hope4DLiving Outreach</li>;
-                      }
-                      return <li key={detail}>{detail}</li>;
-                    })}
-                  </ul>
-                  <p className="mt-4 text-xs text-slate-500">Note: Direct bank transfers keep ministry funds moving while our card gateways finish onboarding and compliance reviews.</p>
-                </div>
-              ))}
+      {/* Ways to Get Involved */}
+      <section className="bg-slate-50">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.45em] text-brand-600">Get Involved</p>
+            <h2 className="mt-3 text-3xl font-bold text-slate-900">Ways to Partner With Us</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600">
+              Whether you give, pray, volunteer, or invite us to your community — every act of partnership expands the reach of hope.
+            </p>
+          </div>
+          
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm transition hover:shadow-lg">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-brand-100 text-2xl">
+                💰
+              </div>
+              <h3 className="mt-4 font-semibold text-slate-900">Give</h3>
+              <p className="mt-2 text-sm text-slate-600">Fund crusades, medical missions, and food relief</p>
+            </div>
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm transition hover:shadow-lg">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-brand-100 text-2xl">
+                🙏
+              </div>
+              <h3 className="mt-4 font-semibold text-slate-900">Pray</h3>
+              <p className="mt-2 text-sm text-slate-600">Join our intercessory network for breakthrough</p>
+            </div>
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm transition hover:shadow-lg">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-brand-100 text-2xl">
+                🤝
+              </div>
+              <h3 className="mt-4 font-semibold text-slate-900">Volunteer</h3>
+              <p className="mt-2 text-sm text-slate-600">Serve at outreaches and community events</p>
+            </div>
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm transition hover:shadow-lg">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-brand-100 text-2xl">
+                📍
+              </div>
+              <h3 className="mt-4 font-semibold text-slate-900">Host</h3>
+              <p className="mt-2 text-sm text-slate-600">Invite us to minister in your city or church</p>
+            </div>
+          </div>
+          
+          <div className="mt-10 text-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:underline"
+            >
+              <span>Learn how you can get involved</span>
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-linear-to-r from-brand-600 via-brand-500 to-brand-600 px-8 py-12 text-white shadow-xl shadow-brand-900/30">
-          <h2 className="text-3xl font-bold">Ready to engage Hope4DLiving?</h2>
-          <p className="mt-4 max-w-2xl text-sm text-white/90">
-            Partner with us to deploy gospel-centered outreaches, medical caravans, food bank deliveries, and shelter
-            initiatives that restore dignity in every dimension of life.
-          </p>
-          <div className="mt-6 flex flex-col gap-4 sm:flex-row">
-            <Link
-              href="/donate"
-              className="rounded-full bg-white px-6 py-3 text-center text-sm font-semibold text-brand-700 transition hover:bg-slate-100"
-            >
-              Support financially
-            </Link>
-            <Link
-              href="/contact"
-              className="rounded-full border border-white/60 px-6 py-3 text-center text-sm font-semibold text-white transition hover:bg-white/10"
-            >
-              Invite us to your city
-            </Link>
+        <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-brand-700 via-brand-600 to-brand-500 px-8 py-16 text-white shadow-2xl shadow-brand-900/40">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <svg className="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <defs>
+                <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                  <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" strokeWidth="0.5"/>
+                </pattern>
+              </defs>
+              <rect width="100" height="100" fill="url(#grid)"/>
+            </svg>
           </div>
-          <p className="mt-6 text-xs uppercase tracking-[0.45em] text-white/70">{organizationProfile.address}</p>
+          
+          <div className="relative text-center">
+            <h2 className="text-3xl font-bold sm:text-4xl">Ready to Make an Impact?</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base text-white/90">
+              Partner with us to deploy gospel-centered outreaches, medical caravans, food bank deliveries, and shelter
+              initiatives that restore dignity in every dimension of life.
+            </p>
+            <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+              <Link
+                href="/donate"
+                className="group flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-brand-700 shadow-lg transition hover:bg-slate-100 hover:shadow-xl"
+              >
+                <span>Give Today</span>
+                <svg className="h-5 w-5 transition group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+              <Link
+                href="/contact"
+                className="rounded-full border-2 border-white px-8 py-4 text-base font-semibold text-white transition hover:bg-white/10"
+              >
+                Invite Us to Your City
+              </Link>
+            </div>
+            <p className="mt-10 text-xs uppercase tracking-[0.35em] text-white/60">{organizationProfile.address}</p>
+          </div>
         </div>
       </section>
     </>
