@@ -701,7 +701,7 @@ export default function DonatePage() {
                 {/* Bank Details Card */}
                 <div className="mt-6 rounded-2xl bg-linear-to-br from-slate-900 to-slate-800 p-6 text-white">
                   <div className="flex items-center justify-between">
-                    <p className="text-xs font-medium uppercase tracking-wider text-slate-400">First Bank of Nigeria</p>
+                    <p className="text-xs font-medium uppercase tracking-wider text-slate-400">FCMB</p>
                     <svg className="h-8 w-8 text-white/30" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M4 10V7a1 1 0 011-1h14a1 1 0 011 1v3M4 10v7a1 1 0 001 1h14a1 1 0 001-1v-7M4 10h16M8 14h.01M12 14h4" />
                     </svg>
@@ -744,7 +744,7 @@ export default function DonatePage() {
                   {/* Bank Name */}
                   <div className="mt-4">
                     <p className="text-xs text-slate-400">Bank</p>
-                    <p className="mt-1 text-sm font-semibold">First Bank of Nigeria</p>
+                    <p className="mt-1 text-sm font-semibold">FCMB</p>
                   </div>
                 </div>
 
