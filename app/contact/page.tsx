@@ -157,7 +157,7 @@ export default function ContactPage() {
                 <p className="text-sm font-medium text-slate-700">Follow us on social media</p>
                 <div className="mt-4 flex gap-3">
                   <a
-                    href="https://facebook.com/hope4dliving"
+                    href="https://www.facebook.com/profile.php?id=61588076216267"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-blue-600 transition hover:bg-blue-200"
@@ -167,7 +167,7 @@ export default function ContactPage() {
                     </svg>
                   </a>
                   <a
-                    href="https://instagram.com/hope4dliving"
+                    href="https://www.instagram.com/hope4dlivingglobaloutreach/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex h-10 w-10 items-center justify-center rounded-full bg-pink-100 text-pink-600 transition hover:bg-pink-200"
