@@ -27,6 +27,20 @@ const programPillars = [
     description: "Food banks, emergency distributions, and sustainable nutrition programs for families facing hunger.",
     highlights: ["Monthly distributions", "School feeding", "Emergency response"],
   },
+  {
+    icon: "🎓",
+    title: "Education & Scholarships",
+    description:
+      "Scholarships, school fees support, and skills training that keep children in class and young adults on a pathway to a hopeful future.",
+    highlights: ["Scholarship funds", "School fees support", "Skills & vocational training"],
+  },
+  {
+    icon: "🏠",
+    title: "Shelter & Recovery",
+    description:
+      "Emergency shelter, clothing, and basic household items for families displaced by crisis, conflict, or disaster.",
+    highlights: ["Temporary shelter", "Clothing & essentials", "Disaster response support"],
+  },
 ];
 
 const compassionTracks = [
@@ -70,9 +84,9 @@ export default function ProgramsPage() {
     <>
       <PageHero
         eyebrow="Our Programs"
-        title="Four pillars of holistic transformation."
+        title="Pillars of holistic transformation."
         description="Spirit, soul, body, and society — our initiatives unite gospel proclamation with practical compassion so entire communities encounter the love of Christ."
-        backgroundImage="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80"
+        backgroundImage="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=3840&q=80"
         align="left"
       />
 
@@ -80,13 +94,13 @@ export default function ProgramsPage() {
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.5em] text-brand-600">What We Do</p>
-          <h2 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">Four Dimensions of Ministry</h2>
+          <h2 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">Six Dimensions of Ministry</h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600">
             Every program is designed to bring transformation across every area of life.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {programPillars.map((pillar) => (
             <div
               key={pillar.title}
@@ -146,14 +160,14 @@ export default function ProgramsPage() {
               <div className="space-y-4">
                 <div className="overflow-hidden rounded-2xl shadow-lg">
                   <img
-                    src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80"
+                    src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=3840&q=80"
                     alt="Team coordination"
                     className="h-40 w-full object-cover"
                   />
                 </div>
                 <div className="overflow-hidden rounded-2xl shadow-lg">
                   <img
-                    src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=900&q=80"
+                    src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=3840&q=80"
                     alt="Community outreach"
                     className="h-48 w-full object-cover"
                   />
@@ -162,14 +176,14 @@ export default function ProgramsPage() {
               <div className="space-y-4 pt-6">
                 <div className="overflow-hidden rounded-2xl shadow-lg">
                   <img
-                    src="https://images.unsplash.com/photo-1461532257246-777de18cd58b?auto=format&fit=crop&w=900&q=80"
+                    src="https://images.unsplash.com/photo-1461532257246-777de18cd58b?auto=format&fit=crop&w=3840&q=80"
                     alt="Medical mission"
                     className="h-48 w-full object-cover"
                   />
                 </div>
                 <div className="overflow-hidden rounded-2xl shadow-lg">
                   <img
-                    src="https://images.unsplash.com/photo-1478479474071-8a3014d422c8?auto=format&fit=crop&w=900&q=80"
+                    src="https://images.unsplash.com/photo-1478479474071-8a3014d422c8?auto=format&fit=crop&w=3840&q=80"
                     alt="Food distribution"
                     className="h-40 w-full object-cover"
                   />
