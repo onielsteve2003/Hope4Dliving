@@ -2,6 +2,7 @@ export const organizationProfile = {
   name: "Hope 4d Living Global Outreach",
   shortName: "Hope4DLiving",
   tagline: "Taking the life-transforming hope of Christ to every dimension of life",
+  lastWebsiteUpdate: "March 2026",
   address:
     "2, ECWA Crescent, Off Okulaja Street, Opposite Pedro Police Station, Gbagada, Lagos State, Nigeria",
   founded: "October 31, 2025",
@@ -52,6 +53,27 @@ export const organizationProfile = {
     },
   ],
 };
+
+export const websiteUpdateLog = [
+  {
+    title: "Donation Experience Refresh",
+    summary:
+      "Updated the giving flow with clear gateway messaging and stronger confidence cues for donors.",
+    period: "Q1 2026",
+  },
+  {
+    title: "Contact Path Simplified",
+    summary:
+      "Replaced unstable form workflow with direct contact channels for faster response and reliability.",
+    period: "Q1 2026",
+  },
+  {
+    title: "Social Presence Updated",
+    summary:
+      "Refreshed social links so supporters can follow current ministry updates and outreach stories.",
+    period: "March 2026",
+  },
+];
 
 export const aimsAndObjectives = [
   "To preach the good news about redemption through our Lord Jesus Christ.",

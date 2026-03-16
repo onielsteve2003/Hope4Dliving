@@ -6,6 +6,7 @@ import {
   organizationProfile,
   strategicInitiatives,
   outreachVision,
+  websiteUpdateLog,
 } from "@/lib/content";
 import { SectionCard } from "@/components/section-card";
 
@@ -13,6 +14,39 @@ const heroBanner = {
   image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80&sat=-15",
   alt: "Volunteers offering food and encouragement during an outreach.",
 };
+
+const impactAreas = [
+  {
+    icon: "📖",
+    title: "Gospel Outreach",
+    description: "Open-air crusades, discipleship, and evangelism initiatives across communities.",
+  },
+  {
+    icon: "🏥",
+    title: "Medical Support",
+    description: "Basic health interventions, consultations, and compassionate care for vulnerable families.",
+  },
+  {
+    icon: "🍞",
+    title: "Food Relief",
+    description: "Food bank support and emergency relief for households in hardship.",
+  },
+  {
+    icon: "🎓",
+    title: "Education Support",
+    description: "Learning support, mentorship, and practical pathways that help children and youth grow.",
+  },
+  {
+    icon: "🏠",
+    title: "Shelter Assistance",
+    description: "Relief materials and shelter-focused interventions for displaced and at-risk people.",
+  },
+  {
+    icon: "⛪",
+    title: "Ministerial Training",
+    description: "Equipping emerging leaders and ministers for sustainable kingdom impact.",
+  },
+];
 
 const CountdownTimer = dynamic(() => import("@/components/CountdownTimer"), { ssr: false });
 
@@ -159,6 +193,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Impact Areas */}
+      <section className="bg-slate-50">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.45em] text-brand-600">Where We Serve</p>
+            <h2 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">Our Impact Areas</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600">
+              We combine spiritual ministry with practical interventions to bring holistic transformation.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {impactAreas.map((area) => (
+              <article
+                key={area.title}
+                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-lg"
+              >
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-brand-100 text-2xl">
+                  {area.icon}
+                </div>
+                <h3 className="mt-4 text-center text-lg font-semibold text-slate-900">{area.title}</h3>
+                <p className="mt-2 text-center text-sm text-slate-600">{area.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Mission & Strategic Focus */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         {/* Mission Statement */}
@@ -263,6 +325,29 @@ export default function Home() {
             </Link>
           </div>
         </div>
+      </section>
+
+      {/* Latest Updates */}
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="flex flex-col gap-3 text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.45em] text-brand-600">Latest Updates</p>
+          <h2 className="text-3xl font-bold text-slate-900">Keeping the Mission and Website Current</h2>
+          <p className="mx-auto max-w-2xl text-base text-slate-600">
+            We periodically refresh this website so partners can follow current plans, outreach progress, and giving channels.
+          </p>
+        </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {websiteUpdateLog.map((item) => (
+            <article key={item.title} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <p className="text-xs font-semibold uppercase tracking-wider text-brand-600">{item.period}</p>
+              <h3 className="mt-3 text-lg font-bold text-slate-900">{item.title}</h3>
+              <p className="mt-2 text-sm text-slate-600">{item.summary}</p>
+            </article>
+          ))}
+        </div>
+        <p className="mt-8 text-center text-xs uppercase tracking-[0.3em] text-slate-500">
+          Last refreshed: {organizationProfile.lastWebsiteUpdate}
+        </p>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">

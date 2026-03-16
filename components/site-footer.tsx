@@ -55,6 +55,7 @@ export function SiteFooter() {
             <p className="text-xs text-slate-500">
               &copy; {new Date().getFullYear()} {organizationProfile.name}. All rights reserved.
             </p>
+            <p className="text-xs text-slate-500">Website refreshed: {organizationProfile.lastWebsiteUpdate}</p>
             <p className="text-xs text-slate-500">
               Website by <span className="font-semibold">OnielSteve</span> — <a className="text-brand-600 hover:underline" href="mailto:stephenobumonah@gmail.com">stephenobumonah@gmail.com</a> · <a className="text-brand-600 hover:underline" href="tel:+2349134352062">+2349134352062</a>
             </p>
