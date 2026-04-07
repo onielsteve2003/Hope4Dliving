@@ -51,8 +51,8 @@ export default function DonatePage() {
   const [paymentSuccess, setPaymentSuccess] = useState(false);
   const [paymentReference, setPaymentReference] = useState("");
 
-  const copyAccountNumber = () => {
-    navigator.clipboard.writeText("2007944960");
+  const copyAccountNumber = (accountNumber: string) => {
+    navigator.clipboard.writeText(accountNumber);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -713,7 +713,7 @@ export default function DonatePage() {
                     <div className="mt-1 flex items-center justify-between">
                       <p className="font-mono text-2xl font-bold tracking-wider">2007944960</p>
                       <button
-                        onClick={copyAccountNumber}
+                        onClick={() => copyAccountNumber("2007944960")}
                         className="flex items-center gap-1 rounded-lg bg-white/10 px-3 py-1.5 text-xs font-medium transition hover:bg-white/20"
                       >
                         {copied ? (
@@ -745,6 +745,56 @@ export default function DonatePage() {
                   <div className="mt-4">
                     <p className="text-xs text-slate-400">Bank</p>
                     <p className="mt-1 text-sm font-semibold">FCMB</p>
+                  </div>
+                </div>
+
+                {/* First Bank Details Card */}
+                <div className="mt-6 rounded-2xl bg-linear-to-br from-slate-900 to-slate-800 p-6 text-white">
+                  <div className="flex items-center justify-between">
+                    <p className="text-xs font-medium uppercase tracking-wider text-slate-400">First Bank of Nigeria</p>
+                    <svg className="h-8 w-8 text-white/30" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M4 10V7a1 1 0 011-1h14a1 1 0 011 1v3M4 10v7a1 1 0 001 1h14a1 1 0 001-1v-7M4 10h16M8 14h.01M12 14h4" />
+                    </svg>
+                  </div>
+                  
+                  {/* Account Number */}
+                  <div className="mt-4">
+                    <p className="text-xs text-slate-400">Account Number</p>
+                    <div className="mt-1 flex items-center justify-between">
+                      <p className="font-mono text-2xl font-bold tracking-wider">2048303462</p>
+                      <button
+                        onClick={() => copyAccountNumber("2048303462")}
+                        className="flex items-center gap-1 rounded-lg bg-white/10 px-3 py-1.5 text-xs font-medium transition hover:bg-white/20"
+                      >
+                        {copied ? (
+                          <>
+                            <svg className="h-4 w-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Copied!</span>
+                          </>
+                        ) : (
+                          <>
+                            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                            <span>Copy</span>
+                          </>
+                        )}
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Account Name */}
+                  <div className="mt-4">
+                    <p className="text-xs text-slate-400">Account Name</p>
+                    <p className="mt-1 text-sm font-semibold">Hope 4d living global outreach</p>
+                  </div>
+
+                  {/* Bank Name */}
+                  <div className="mt-4">
+                    <p className="text-xs text-slate-400">Bank</p>
+                    <p className="mt-1 text-sm font-semibold">First Bank of Nigeria</p>
                   </div>
                 </div>
 
