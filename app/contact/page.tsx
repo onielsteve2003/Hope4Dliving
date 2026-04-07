@@ -39,7 +39,7 @@ const quickContacts = [
       </svg>
     ),
     label: "Address",
-    value: "The New Covenant Catholic Church, Lagos",
+      value: "Freedom City, Lagos",
     href: "https://www.google.com/maps/place/The+New+Covenant+Catholic+Church/@6.5449995,3.3674425,17z/data=!4m6!3m5!1s0x103b8da267cbe123:0xfb54517cfb1e11dc!8m2!3d6.5449995!4d3.3723134!16s%2Fg%2F11f3x9hvm5?hl=en-US&entry=ttu&g_ep=EgoyMDI2MDEyMS4wIKXMDSoASAFQAw%3D%3D",
   },
 ];
@@ -293,7 +293,7 @@ export default function ContactPage() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="The New Covenant Catholic Church Location"
+                  title="Freedom City Location"
               />
             </div>
           </div>
