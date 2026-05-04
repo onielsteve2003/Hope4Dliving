@@ -51,7 +51,7 @@ const impactAreas = [
 const CountdownTimer = dynamic(() => import("@/components/CountdownTimer"), { ssr: false });
 
 export default function Home() {
-  const crusadeDate = new Date("2027-01-27T08:00:00+01:00");
+  const crusadeDate = new Date("2027-02-16T08:00:00+01:00");
   // List of hero videos
   const heroVideos = [
     "/videos/hero-image.mp4",
@@ -149,8 +149,8 @@ export default function Home() {
         <div className="grid items-center gap-8 rounded-3xl border border-brand-100 bg-white p-8 shadow-lg lg:grid-cols-[1.2fr_1fr]">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand-600">Next Impact</p>
-            <h2 className="mt-3 text-3xl font-bold text-slate-900">Enugu Crusade – January 2027</h2>
-            <p className="mt-3 text-sm text-slate-600">Wednesday 27th & Thursday 28th January 2027</p>
+            <h2 className="mt-3 text-3xl font-bold text-slate-900">Enugu Crusade – February 2027</h2>
+            <p className="mt-3 text-sm text-slate-600">Tuesday 16th & Wednesday 17th February 2027</p>
             <p className="mt-2 text-sm text-slate-600">Morning Session 8AM · Evening Session 4PM</p>
             <Link
               href="/contact"
