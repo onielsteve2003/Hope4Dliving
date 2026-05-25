@@ -246,6 +246,53 @@ export default function DonatePage() {
         </div>
       </section>
 
+      {/* Scholarship Callout */}
+      <section className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="overflow-hidden rounded-3xl border border-brand-100 bg-linear-to-br from-brand-50 via-white to-slate-50 shadow-lg">
+          <div className="grid gap-8 p-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:p-10">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.45em] text-brand-600">Educational Support Fund</p>
+              <h2 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">Scholarships remain one of our major keys.</h2>
+              <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-600">
+                Support for education is a core part of our movement. Interested applicants can download the scholarship form,
+                complete it carefully, and submit it for review.
+              </p>
+
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                <a
+                  href="/forms/Hope4DLiving_Scholarship_Form_v2.pdf"
+                  download
+                  className="inline-flex items-center justify-center rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-brand-700"
+                >
+                  Download Scholarship Form
+                </a>
+                <a
+                  href="mailto:info@hope4dliving.org?subject=Scholarship%20Form%20Submission"
+                  className="inline-flex items-center justify-center rounded-full border border-brand-200 bg-white px-6 py-3 text-sm font-semibold text-brand-700 transition hover:border-brand-300 hover:bg-brand-50"
+                >
+                  Send Completed Form
+                </a>
+              </div>
+
+              <p className="mt-4 text-sm text-slate-500">
+                Completed forms should be sent to <span className="font-semibold text-slate-700">info@hope4dliving.org</span>.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900">What the form includes</h3>
+              <ul className="mt-4 space-y-3 text-sm text-slate-600">
+                <li>Applicant and contact information</li>
+                <li>School, course, and level details</li>
+                <li>Scholarship purpose and statement of need</li>
+                <li>Academic or ministry goals</li>
+                <li>Supporting document checklist and declaration</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Main Payment Section */}
       <section id="give-now" className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="text-center">
@@ -860,6 +907,31 @@ export default function DonatePage() {
                     <p className="text-sm text-slate-600">Feeding families in crisis</p>
                   </div>
                 </div>
+                <div className="flex items-start gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-100 text-lg">
+                    🎓
+                  </div>
+                  <div>
+                    <p className="font-semibold text-slate-900">Educational Support Fund</p>
+                    <p className="text-sm text-slate-600">Scholarships and school-fee support for children and youth</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <a
+                  href="/forms/Hope4DLiving_Scholarship_Form_v2.pdf"
+                  download
+                  className="inline-flex items-center justify-center rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-700"
+                >
+                  Download Scholarship Form
+                </a>
+                <a
+                  href="mailto:info@hope4dliving.org?subject=Scholarship%20Form%20Submission"
+                  className="inline-flex items-center justify-center rounded-full border border-brand-200 bg-white px-5 py-2.5 text-sm font-semibold text-brand-700 transition hover:border-brand-300 hover:bg-brand-50"
+                >
+                  Submit Form
+                </a>
               </div>
             </div>
             

@@ -33,8 +33,8 @@ const impactAreas = [
   },
   {
     icon: "🎓",
-    title: "Education Support",
-    description: "Learning support, mentorship, and practical pathways that help children and youth grow.",
+    title: "Educational Support Fund",
+    description: "Scholarships, learning support, mentorship, and practical pathways that help children and youth grow.",
   },
   {
     icon: "🏠",
@@ -217,6 +217,28 @@ export default function Home() {
                 <p className="mt-2 text-center text-sm text-slate-600">{area.description}</p>
               </article>
             ))}
+          </div>
+
+          <div className="mt-10 rounded-2xl border border-brand-100 bg-brand-50/60 p-6 text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand-700">Scholarship Access</p>
+            <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-700">
+              Educational support is one of our major keys. Download the scholarship form and submit it directly for review.
+            </p>
+            <div className="mt-5 flex flex-col justify-center gap-3 sm:flex-row">
+              <a
+                href="/forms/Hope4DLiving_Scholarship_Form_v2.pdf"
+                download
+                className="inline-flex items-center justify-center rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-700"
+              >
+                Download Scholarship Form
+              </a>
+              <a
+                href="mailto:info@hope4dliving.org?subject=Scholarship%20Form%20Submission"
+                className="inline-flex items-center justify-center rounded-full border border-brand-300 bg-white px-5 py-2.5 text-sm font-semibold text-brand-700 transition hover:border-brand-400 hover:bg-brand-50"
+              >
+                Submit Form
+              </a>
+            </div>
           </div>
         </div>
       </section>

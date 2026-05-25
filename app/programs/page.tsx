@@ -125,6 +125,23 @@ export default function ProgramsPage() {
                   </span>
                 ))}
               </div>
+              {pillar.title === "Education & Scholarships" && (
+                <div className="mt-6 flex flex-col gap-2 sm:flex-row">
+                  <a
+                    href="/forms/Hope4DLiving_Scholarship_Form_v2.pdf"
+                    download
+                    className="inline-flex items-center justify-center rounded-full bg-brand-600 px-4 py-2 text-xs font-semibold text-white transition hover:bg-brand-700"
+                  >
+                    Download Scholarship Form
+                  </a>
+                  <a
+                    href="mailto:info@hope4dliving.org?subject=Scholarship%20Form%20Submission"
+                    className="inline-flex items-center justify-center rounded-full border border-brand-200 bg-white px-4 py-2 text-xs font-semibold text-brand-700 transition hover:border-brand-300 hover:bg-brand-50"
+                  >
+                    Submit Form
+                  </a>
+                </div>
+              )}
             </div>
           ))}
         </div>
