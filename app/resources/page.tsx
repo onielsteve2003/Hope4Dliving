@@ -1,57 +1,6 @@
 import { PageHero } from "@/components/page-hero";
-import { SectionCard } from "@/components/section-card";
 import Link from "next/link";
-
-const resources = [
-  {
-    category: "Messages",
-    title: "Power to Prevail",
-    description:
-      "The Holy Spirit empowers believers to live victoriously and be effective witnesses. Discover how to walk in His power daily.",
-    image: "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=800&q=80&sat=-15",
-    type: "Teaching",
-  },
-  {
-    category: "Messages",
-    title: "The Gospel Changes Everything",
-    description:
-      "Salvation through Jesus Christ brings eternal hope and practical transformation. Learn how the Gospel impacts every dimension of life.",
-    image: "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&w=800&q=80&sat=-15",
-    type: "Evangelism",
-  },
-  {
-    category: "Prayer",
-    title: "Interceding for Africa",
-    description:
-      "Join us in prayer for revival, healing, and breakthrough across Nigeria and the African continent.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80&sat=-20",
-    type: "Prayer Guide",
-  },
-  {
-    category: "Training",
-    title: "Ministerial Discipleship",
-    description:
-      "Equip yourself with theological depth and practical ministry tools through our training pathways.",
-    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80&sat=-15",
-    type: "Course",
-  },
-  {
-    category: "Outreach",
-    title: "Crusade Planning Guide",
-    description:
-      "Learn how to organize effective city-wide evangelistic crusades that combine proclamation with compassion.",
-    image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80&sat=-20",
-    type: "Manual",
-  },
-  {
-    category: "Compassion",
-    title: "Medical Mission Handbook",
-    description:
-      "Practical guide for deploying medical caravans and compassion clinics in underserved communities.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80&sat=-15",
-    type: "Guide",
-  },
-];
+import { downloadableResources } from "@/lib/content";
 
 const bibleVerses = [
   {
@@ -114,7 +63,7 @@ export default function ResourcesPage() {
       <section className="bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="text-center text-white">
-            <h2 className="text-3xl font-bold sm:text-4xl">Grounded in God's Word</h2>
+            <h2 className="text-3xl font-bold sm:text-4xl">Grounded in God&apos;s Word</h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-300">
               Every resource we offer is rooted in Scripture and designed to equip believers for kingdom impact.
             </p>
@@ -126,7 +75,7 @@ export default function ResourcesPage() {
                 key={idx}
                 className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur transition-all hover:bg-white/10"
               >
-                <p className="text-base italic leading-relaxed text-white">"{verse.verse}"</p>
+                <p className="text-base italic leading-relaxed text-white">&ldquo;{verse.verse}&rdquo;</p>
                 <p className="mt-4 text-sm font-semibold text-brand-300">— {verse.reference}</p>
               </div>
             ))}
@@ -138,40 +87,68 @@ export default function ResourcesPage() {
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.4em] text-brand-600">Library</p>
-          <h2 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">Practical Tools for Ministry</h2>
+          <h2 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">Real Downloads for Ministry and Outreach</h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600">
-            Download teachings, guides, and training materials to strengthen your walk with Christ and expand your
-            ministry effectiveness.
+            Download current Hope4DLiving forms, guides, and ministry briefs that supporters, volunteers, and applicants can use right away.
           </p>
         </div>
 
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {resources.map((resource, idx) => (
+          {downloadableResources.map((resource) => (
             <div
-              key={idx}
+              key={resource.title}
               className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all hover:shadow-lg"
             >
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={resource.image}
-                  alt={resource.title}
-                  className="h-full w-full object-cover transition-transform group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-slate-900/60 to-transparent" />
-                <div className="absolute bottom-3 left-3 inline-block rounded-full bg-brand-600 px-3 py-1 text-xs font-semibold text-white">
+              <div className="bg-linear-to-br from-brand-700 via-brand-600 to-brand-500 px-6 py-8 text-white">
+                <div className="inline-block rounded-full bg-white/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white/90">
+                  {resource.category}
+                </div>
+                <div className="mt-6 inline-block rounded-full bg-white px-3 py-1 text-xs font-semibold text-brand-700">
                   {resource.type}
                 </div>
               </div>
               <div className="p-6">
-                <p className="text-xs font-semibold uppercase tracking-wider text-brand-500">{resource.category}</p>
                 <h3 className="mt-2 text-xl font-bold text-slate-900">{resource.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-slate-600">{resource.description}</p>
-                <button className="mt-4 text-sm font-semibold text-brand-600 hover:underline">
-                  Coming Soon →
-                </button>
+                <a
+                  href={resource.href}
+                  download
+                  className="mt-5 inline-flex items-center rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-700"
+                >
+                  {resource.actionLabel}
+                </a>
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="bg-slate-50 py-16">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-6 rounded-3xl border border-brand-100 bg-white p-8 shadow-sm lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.4em] text-brand-600">Helpful Next Step</p>
+              <h2 className="mt-3 text-3xl font-bold text-slate-900">Need scholarship help?</h2>
+              <p className="mt-4 text-base text-slate-600">
+                Download the form, review the application guide, and send your completed submission to the Hope4DLiving team for review.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+              <a
+                href="/forms/Hope4DLiving_Scholarship_Form_v2.pdf"
+                download
+                className="inline-flex items-center justify-center rounded-full bg-brand-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-700"
+              >
+                Download Scholarship Form
+              </a>
+              <a
+                href="mailto:info@hope4dliving.org?subject=Scholarship%20Form%20Submission"
+                className="inline-flex items-center justify-center rounded-full border border-brand-200 bg-white px-5 py-3 text-sm font-semibold text-brand-700 transition hover:border-brand-300 hover:bg-brand-50"
+              >
+                Submit Completed Form
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -210,7 +187,7 @@ export default function ResourcesPage() {
           <div className="p-10 text-center text-white lg:p-12">
             <h2 className="text-3xl font-bold sm:text-4xl">Ready to Make a Difference?</h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-brand-50">
-              Whether you want to volunteer, partner with us in outreach, or support our mission financially, there's a
+              Whether you want to volunteer, partner with us in outreach, or support our mission financially, there&apos;s a
               place for you in the Hope4DLiving family.
             </p>
             <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">

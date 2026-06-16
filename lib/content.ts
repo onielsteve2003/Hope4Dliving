@@ -4,7 +4,7 @@ export const organizationProfile = {
   tagline: "Taking the life-transforming hope of Christ to every dimension of life",
   vision:
     "Bringing Hope to Every Life through the gospel proclamation, and humanitarian services.",
-  lastWebsiteUpdate: "May 2026",
+  lastWebsiteUpdate: "June 2026",
   address:
     "2, ECWA Crescent, Off Okulaja Street, Opposite Pedro Police Station, Gbagada, Lagos State, Nigeria",
   founded: "October 31, 2025",
@@ -58,22 +58,148 @@ export const organizationProfile = {
 
 export const websiteUpdateLog = [
   {
-    title: "Donation Experience Refresh",
+    title: "June Scholarship Access Launch",
     summary:
-      "Updated the giving flow with clear gateway messaging and stronger confidence cues for donors.",
-    period: "Q1 2026",
+      "Added a downloadable scholarship form, clearer guidance for applicants, and direct submission paths for review.",
+    period: "June 2026",
   },
   {
-    title: "Contact Path Simplified",
+    title: "Resources Library Upgraded",
     summary:
-      "Replaced unstable form workflow with direct contact channels for faster response and reliability.",
-    period: "Q1 2026",
+      "Published practical downloadable guides for prayer, crusade preparation, partnership, and scholarship support.",
+    period: "June 2026",
   },
   {
-    title: "Social Presence Updated",
+    title: "Enugu Crusade Dates Confirmed",
     summary:
-      "Refreshed social links so supporters can follow current ministry updates and outreach stories.",
-    period: "March 2026",
+      "Updated the homepage with the confirmed February 16–17, 2027 crusade schedule so partners can prepare early.",
+    period: "June 2026",
+  },
+  {
+    title: "Giving Information Refreshed",
+    summary:
+      "Improved donation clarity with updated bank transfer details and stronger confidence cues for ministry partners.",
+    period: "June 2026",
+  },
+];
+
+export const impactStories = [
+  {
+    title: "Scholarship access now has a clear pathway",
+    story:
+      "Families and students can now move from interest to action with a downloadable form, visible guidance, and a direct submission channel.",
+    outcome: "Practical next step for education support requests.",
+  },
+  {
+    title: "Partners can respond faster to current needs",
+    story:
+      "Updated giving information and contact routes make it easier for supporters to donate, ask questions, and engage specific outreach priorities.",
+    outcome: "Less friction for donors and ministry partners.",
+  },
+  {
+    title: "The next crusade is now easier to rally around",
+    story:
+      "With the Enugu crusade dates confirmed and surfaced on the homepage, prayer teams, volunteers, and local collaborators can begin planning in unity.",
+    outcome: "Earlier mobilization for the February 2027 outreach.",
+  },
+];
+
+export const downloadableResources = [
+  {
+    category: "Scholarship",
+    title: "Scholarship Application Form",
+    description:
+      "Official form for students applying to the Hope4DLiving Educational Support Fund.",
+    type: "PDF Form",
+    href: "/forms/Hope4DLiving_Scholarship_Form_v2.pdf",
+    actionLabel: "Download Form",
+  },
+  {
+    category: "Prayer",
+    title: "June 2026 Prayer Guide",
+    description:
+      "Focused prayer points for revival, healing, volunteers, partners, and the Enugu crusade preparations.",
+    type: "PDF Guide",
+    href: "/resources/Hope4DLiving_Prayer_Guide_June_2026.pdf",
+    actionLabel: "Download Guide",
+  },
+  {
+    category: "Outreach",
+    title: "Enugu Crusade Preparation Checklist",
+    description:
+      "A planning checklist for intercessors, volunteers, logistics teams, and local church partners preparing for outreach.",
+    type: "PDF Checklist",
+    href: "/resources/Hope4DLiving_Enugu_Crusade_Prep_Checklist.pdf",
+    actionLabel: "Download Checklist",
+  },
+  {
+    category: "Partnership",
+    title: "Ministry Partner Brief",
+    description:
+      "A concise overview of current ministry priorities, giving channels, and practical partnership opportunities.",
+    type: "PDF Brief",
+    href: "/resources/Hope4DLiving_Ministry_Partner_Brief_June_2026.pdf",
+    actionLabel: "Download Brief",
+  },
+  {
+    category: "Guidance",
+    title: "Scholarship Application Guide",
+    description:
+      "Step-by-step application help covering eligibility, required documents, and submission guidance.",
+    type: "PDF Guide",
+    href: "/resources/Hope4DLiving_Scholarship_Application_Guide.pdf",
+    actionLabel: "Download Guide",
+  },
+];
+
+export const scholarshipApplicationSteps = [
+  {
+    title: "Download the form",
+    description:
+      "Start with the official scholarship application form and read it through before filling any section.",
+  },
+  {
+    title: "Prepare your documents",
+    description:
+      "Gather your school details, a valid result or student record, contact information, and any supporting documents that explain your need.",
+  },
+  {
+    title: "Complete every section clearly",
+    description:
+      "Use accurate names, current phone numbers, and a short but honest explanation of why support is needed and how it will help.",
+  },
+  {
+    title: "Submit for review",
+    description:
+      "Send the completed form to info@hope4dliving.org and keep a copy so you can respond quickly if follow-up details are requested.",
+  },
+];
+
+export const scholarshipFaqs = [
+  {
+    question: "Who can apply for the scholarship support fund?",
+    answer:
+      "Students and families with a genuine education-related need may apply. Each application is reviewed on its own merit and according to available support.",
+  },
+  {
+    question: "What documents should I prepare before applying?",
+    answer:
+      "Prepare your school information, recent academic record if available, parent or guardian details, a passport photograph, and any document that helps explain your financial need.",
+  },
+  {
+    question: "How should I submit the completed form?",
+    answer:
+      "Download the form, complete it clearly, and send it to info@hope4dliving.org with the subject line Scholarship Form Submission.",
+  },
+  {
+    question: "Does submitting a form guarantee support?",
+    answer:
+      "No. Submission starts the review process, but final support depends on eligibility, completeness of information, and available funding.",
+  },
+  {
+    question: "Can I ask questions before I apply?",
+    answer:
+      "Yes. If you need clarification before submitting, contact Hope4DLiving through the contact page or write to info@hope4dliving.org.",
   },
 ];
 

@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import {
+  impactStories,
   organizationProfile,
   strategicInitiatives,
   outreachVision,
@@ -243,6 +244,29 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Impact & Testimony */}
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.45em] text-brand-600">Impact & Testimony</p>
+          <h2 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">Visible progress that opens doors for ministry</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600">
+            These current updates show how Hope4DLiving is making it easier for families, partners, and volunteers to engage the mission right now.
+          </p>
+        </div>
+        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          {impactStories.map((item) => (
+            <article key={item.title} className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-lg">
+              <div className="inline-flex rounded-full bg-brand-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-700">
+                Current impact
+              </div>
+              <h3 className="mt-4 text-xl font-bold text-slate-900">{item.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-slate-600">{item.story}</p>
+              <p className="mt-4 text-sm font-semibold text-brand-700">{item.outcome}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       {/* Mission & Strategic Focus */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         {/* Mission Statement */}
@@ -357,12 +381,12 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-3 text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.45em] text-brand-600">Latest Updates</p>
-          <h2 className="text-3xl font-bold text-slate-900">Keeping the Mission and Website Current</h2>
+          <h2 className="text-3xl font-bold text-slate-900">Fresh June 2026 ministry and website updates</h2>
           <p className="mx-auto max-w-2xl text-base text-slate-600">
-            We periodically refresh this website so partners can follow current plans, outreach progress, and giving channels.
+            We refreshed the site this month so partners can track current outreach priorities, scholarship access, and preparation for upcoming ministry work.
           </p>
         </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {websiteUpdateLog.map((item) => (
             <article key={item.title} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <p className="text-xs font-semibold uppercase tracking-wider text-brand-600">{item.period}</p>

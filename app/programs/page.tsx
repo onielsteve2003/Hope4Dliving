@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
-import { strategicInitiatives } from "@/lib/content";
+import { scholarshipApplicationSteps, scholarshipFaqs, strategicInitiatives } from "@/lib/content";
 
 const programPillars = [
   {
@@ -233,6 +233,70 @@ export default function ProgramsPage() {
         </div>
       </section>
 
+      {/* Scholarship Guidance */}
+      <section className="bg-slate-50">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.45em] text-brand-600">Scholarship Guidance</p>
+              <h2 className="mt-3 text-3xl font-bold text-slate-900">How to apply with confidence</h2>
+              <p className="mt-4 text-base text-slate-600">
+                We want each applicant to understand the process clearly, prepare the right documents, and submit a complete form for review.
+              </p>
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row lg:flex-col">
+                <a
+                  href="/forms/Hope4DLiving_Scholarship_Form_v2.pdf"
+                  download
+                  className="inline-flex items-center justify-center rounded-full bg-brand-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-700"
+                >
+                  Download Scholarship Form
+                </a>
+                <a
+                  href="mailto:info@hope4dliving.org?subject=Scholarship%20Form%20Submission"
+                  className="inline-flex items-center justify-center rounded-full border border-brand-200 bg-white px-5 py-3 text-sm font-semibold text-brand-700 transition hover:border-brand-300 hover:bg-brand-50"
+                >
+                  Submit Completed Form
+                </a>
+              </div>
+            </div>
+            <div className="grid gap-4">
+              {scholarshipApplicationSteps.map((step, index) => (
+                <div key={step.title} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-100 text-sm font-bold text-brand-700">
+                      {index + 1}
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-slate-900">{step.title}</h3>
+                      <p className="mt-2 text-sm text-slate-600">{step.description}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Scholarship FAQ */}
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.45em] text-brand-600">Scholarship FAQ</p>
+          <h2 className="mt-3 text-3xl font-bold text-slate-900">Common questions from applicants</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600">
+            These answers help students and families understand what to prepare before applying.
+          </p>
+        </div>
+        <div className="mt-12 grid gap-4 md:grid-cols-2">
+          {scholarshipFaqs.map((faq) => (
+            <div key={faq.question} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-slate-900">{faq.question}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-slate-600">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Strategic Initiatives */}
       <section className="bg-slate-900">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
@@ -289,8 +353,8 @@ export default function ProgramsPage() {
         <div className="rounded-3xl border border-brand-100 bg-brand-50/50 p-10 text-center">
           <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Want to Partner With Us?</h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600">
-            Whether you're a medical professional, church leader, or someone called to serve — 
-            there's a place for you in our programs.
+            Whether you&apos;re a medical professional, church leader, or someone called to serve — 
+            there&apos;s a place for you in our programs.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <Link
