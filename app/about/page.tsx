@@ -129,6 +129,10 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+          <div className="mx-auto mt-10 max-w-3xl rounded-3xl border border-brand-100 bg-white px-6 py-6 text-center shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-[0.45em] text-brand-600">Our Vision</p>
+            <p className="mt-3 text-lg font-semibold text-slate-900">{organizationProfile.vision}</p>
+          </div>
         </div>
       </section>
 

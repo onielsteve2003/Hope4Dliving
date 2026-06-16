@@ -258,6 +258,10 @@ export default function Home() {
             through bold evangelism, compassion-driven outreach, and the equipping of ministers 
             for sustainable kingdom impact across Nigeria, Africa, and the nations.
           </p>
+          <div className="mx-auto mt-8 max-w-3xl rounded-3xl border border-brand-100 bg-brand-50/60 px-6 py-6 text-left shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-brand-700">Our Vision</p>
+            <p className="mt-3 text-lg font-semibold text-slate-900">{organizationProfile.vision}</p>
+          </div>
         </div>
 
         {/* Strategic Initiatives */}
