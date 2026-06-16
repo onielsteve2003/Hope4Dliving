@@ -172,12 +172,12 @@ export default function AboutPage() {
           </div>
           <div className="relative overflow-hidden rounded-3xl shadow-2xl">
             <img
-              src="https://images.unsplash.com/photo-1653392098608-baafefcf9ab2?auto=format&fit=crop&w=800&q=80"
-              alt="Leaders praying together"
+              src="https://images.unsplash.com/photo-1573167507387-6b4b98cb7c13?auto=format&fit=crop&w=800&q=80"
+              alt="Trustees and leaders deliberating in formal governance session"
               className="h-80 w-full object-cover lg:h-96"
             />
             <div className="absolute inset-0 bg-linear-to-t from-slate-900/60 via-transparent" />
-            <p className="absolute bottom-4 left-4 text-sm font-medium text-white/90">Leadership prayer retreat</p>
+            <p className="absolute bottom-4 left-4 text-sm font-medium text-white/90">Trustees in governance deliberation</p>
           </div>
         </div>
       </section>
