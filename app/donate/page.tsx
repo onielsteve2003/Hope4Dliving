@@ -5,7 +5,9 @@ import { useState } from "react";
 import { PageHero } from "@/components/page-hero";
 import { organizationProfile } from "@/lib/content";
 
-const donationAmounts = [5000, 10000, 25000, 50000, 100000];
+const donationAmounts = [
+  50000, 100000, 150000, 200000, 250000, 300000, 350000, 400000, 450000, 500000,
+];
 
 const stewardshipPromises = [
   {
@@ -42,7 +44,7 @@ export default function DonatePage() {
   const [activeMethod, setActiveMethod] = useState<"paystack" | "flutterwave" | "transfer">("flutterwave");
   
   // Payment form state
-  const [selectedAmount, setSelectedAmount] = useState<number | null>(10000);
+  const [selectedAmount, setSelectedAmount] = useState<number | null>(50000);
   const [customAmount, setCustomAmount] = useState("");
   const [donorEmail, setDonorEmail] = useState("");
   const [donorName, setDonorName] = useState("");
@@ -130,7 +132,7 @@ export default function DonatePage() {
           // Reset form
           setDonorEmail("");
           setDonorName("");
-          setSelectedAmount(10000);
+          setSelectedAmount(50000);
           setCustomAmount("");
         },
         onClose: () => {
@@ -190,7 +192,7 @@ export default function DonatePage() {
             setDonorEmail("");
             setDonorName("");
             setDonorPhone("");
-            setSelectedAmount(10000);
+            setSelectedAmount(50000);
             setCustomAmount("");
           }
         },
@@ -416,11 +418,11 @@ export default function DonatePage() {
                         ₦{formatCurrency(amount)}
                       </button>
                     ))}
-                    <div className="relative">
+                    <div className="relative col-span-2">
                       <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-medium text-slate-500">₦</span>
                       <input
                         type="text"
-                        placeholder="Other"
+                        placeholder="Other amount"
                         value={customAmount ? formatCurrency(parseInt(customAmount)) : ""}
                         onChange={(e) => handleCustomAmountChange(e.target.value)}
                         className={`w-full rounded-xl border-2 py-3 pl-8 pr-3 text-sm font-semibold transition placeholder:font-normal ${
@@ -602,11 +604,11 @@ export default function DonatePage() {
                         ₦{formatCurrency(amount)}
                       </button>
                     ))}
-                    <div className="relative">
+                    <div className="relative col-span-2">
                       <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm font-medium text-slate-500">₦</span>
                       <input
                         type="text"
-                        placeholder="Other"
+                        placeholder="Other amount"
                         value={customAmount ? formatCurrency(parseInt(customAmount)) : ""}
                         onChange={(e) => handleCustomAmountChange(e.target.value)}
                         className={`w-full rounded-xl border-2 py-3 pl-8 pr-3 text-sm font-semibold transition placeholder:font-normal ${
